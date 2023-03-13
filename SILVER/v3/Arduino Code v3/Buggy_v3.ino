@@ -4,14 +4,20 @@
 #include "Drive.h"
 #include "Ultrasonics.h"
 #include "Follow_leader.h"
+#include "Encoder.h"
+
 
 void setup() {
   error, prev_error = 0;
   time, prev_time = 0;
   parked = 1;
   connect();
+  StartEncoder();
   attachInterrupt(digitalPinToInterrupt(LEYE), right, LOW);
   attachInterrupt(digitalPinToInterrupt(REYE), left, LOW);
+  attachInterrupt(digitalPinToInterrupt(encoder), doEncoder, RISING);
+
+
 }
 void loop() {
   if (parked == 1 /*|| stop_for_object()*/){ //Uncomment for bronze challenge
@@ -33,4 +39,6 @@ void loop() {
       parked = 0;
     }
   }
+  run_encoder();
+
 }

@@ -3,8 +3,6 @@
 #include <Arduino.h>
 #include <string>
 
-
-
 extern const int LEYE; 
 extern const int REYE; 
 extern const int V_RIGHT;
