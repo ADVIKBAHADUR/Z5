@@ -3,13 +3,11 @@ Madgwick filter;
 const float sensorRate = 104.00;
 
 double heading;
-double init_heading, tot_error, calibrate = 0.002;
+double init_heading, tot_error, calibrate = 0.033;
 
 void initialise_IMU(){
   if (!IMU.begin()) {
     Serial.println("Failed to initialize IMU");
-    // stop here if you can't access the IMU:
-    while (true);
   }
   filter.begin(sensorRate);
 }
@@ -27,7 +25,7 @@ double angle(){
     // update the filter, which computes orientation:
     filter.updateIMU(xGyro, yGyro, zGyro, xAcc, yAcc, zAcc);
     heading = filter.getYaw();
-    heading = heading + tot_error;
+    heading = heading + tot_error - 180;
     return(heading);
     heading = heading - init_heading;
   }

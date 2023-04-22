@@ -13,6 +13,6 @@ const int US_ECHO = 5;
 const unsigned long EVENT = 30000;//unsigned as gets realy long
 const int STOPPINGDIST = 30;
 unsigned long prev_event = 0;
-const int fasterwheel = 80;
+const int fasterwheel = 100;
 const int slowerwheel = 20;
 

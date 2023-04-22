@@ -8,7 +8,7 @@ extern const Coord az_b[9];
 extern const Coord az_c[9];
 extern const Coord az_d[9];
 extern const Coord az_e[9];
-extern const Coord az_f[9];
+extern const Coord az_f[9 ];
 extern const Coord az_g[9];
 extern const Coord az_h[9];
 extern const Coord az_i[9];

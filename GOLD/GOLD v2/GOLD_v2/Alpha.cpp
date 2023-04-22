@@ -11,6 +11,7 @@ const Coord az_h[9] = {Coord(0,4), Coord(0,2), Coord(4,2), Coord(4,4), Coord(4,0
 const Coord az_i[9] = {Coord(0,4), Coord(0,0), Coord(4,0), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999)};
 const Coord az_j[9] = {Coord(2,0), Coord(2,4), Coord(0,4), Coord(4,4), Coord(4,0), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999)};
 const Coord az_k[9] = {Coord(0,4), Coord(0,2), Coord(4,4), Coord(0,2), Coord(4,0), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999)};
+const Coord az_l[9] = {Coord(0,0), Coord(0, 4), Coord(0,0), Coord(4, 0), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999)};
 const Coord az_m[9] = {Coord(0,4), Coord(2,0), Coord(4,4), Coord(4,0), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999)};
 const Coord az_n[9] = {Coord(0,4), Coord(4,0), Coord(4,4), Coord(4,0), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999)};
 const Coord az_o[9] = {Coord(2,0), Coord(0,2), Coord(2,4), Coord(4,2), Coord(2,0), Coord(4,0), Coord(-999,-999), Coord(-999,-999), Coord(-999,-999)};

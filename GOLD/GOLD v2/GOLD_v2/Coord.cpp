@@ -33,11 +33,16 @@ Coord state;
 
 
 double calculate_angle(double heading, Coord target) {
-  double angle = heading-(atan((target.getY() - state.getY())/(target.getX() - state.getX())));
+  double inter1 = atan((target.getY() - state.getY())/(target.getX() - state.getX()))*57.296;
+  double angle = heading - inter1;
+  // Serial.println(inter1);
+  // Serial.println(heading);
+  // Serial.println(angle);
   return angle;
 }
 
 double calculate_dist(Coord state, Coord target){
-  double distance = sqrt(sq(target.getY() - state.getY())-sq(target.getX() - state.getX()));
+  double distance = sqrt(sq(target.getY() - state.getY())+sq(target.getX() - state.getX()));
+  Serial.println(distance);
   return distance;
 }

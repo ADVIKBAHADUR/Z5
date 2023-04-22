@@ -1,19 +1,11 @@
 #include "Drive.h"
 
-int parked = 1; //Stopped nothing runs until 0
+int parked = 0; //Stopped nothing runs until 0
 double SPEED = 80;
 
 void straight(){
-
-  if(SPEED <= 0){  
-    rightM(2);
-    leftM(2);
-    SPEED = SPEED *8;
-  }  
-  else{
-    rightM(1);
-    leftM(1);
-  }
+  rightM(1);
+  leftM(1);
   analogWrite(V_LEFT, abs(SPEED));
   analogWrite(V_RIGHT, abs(SPEED));
 }
@@ -34,20 +26,19 @@ void stop(){
 
 void left(){
   if (parked != 1){  
-  analogWrite(V_RIGHT, fasterwheel);
-  analogWrite(V_LEFT, slowerwheel);
-  rightM(1);
-  leftM(1);
+    analogWrite(V_RIGHT, fasterwheel);
+    analogWrite(V_LEFT, slowerwheel);
+    rightM(1);
+    leftM(1);
   }
-
 }
 
-void right(){ 
+void right(){
   if (parked != 1){
-  analogWrite(V_LEFT, fasterwheel);
-  analogWrite(V_RIGHT, slowerwheel);
-  rightM(1);
-  leftM(1);
+    analogWrite(V_LEFT, fasterwheel);
+    analogWrite(V_RIGHT, slowerwheel);
+    rightM(1);
+    leftM(1);
   }
 }
 void rightM(int state){
